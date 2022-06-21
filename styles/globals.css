@@ -3,21 +3,23 @@
 @tailwind utilities;
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Patrick Hand', 'Montserrat', sans-serif;
   @apply transition duration-300;
 }
 
-:is(html, body) {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+body {
+  background-image: linear-gradient(to bottom, #374151, #111827);
+  min-height: 100vh;
 }
 
-:is(html, body):before {
+/* :is(html, body):before {
   content: "";
   width: 100%;
   height: 100vh;
-  background-image: url("../public/assets/bg.jpg");
+  background-image: url("../public/assets/bg.png");
   position: fixed;
   left: 0;
   top: 0;
@@ -25,7 +27,7 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .text-shadow {
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
@@ -45,24 +47,24 @@
 }
 
 nav a {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
   font-weight: 500;
   transition: 300ms ease;
 }
 
 nav a:hover {
-  @apply text-sky-700;
+  @apply text-slate-400;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  @apply font-bold text-xl;
+h1 {
+  @apply text-white text-xl md:text-2xl;
 }
 
 nav a, span {
-  @apply text-slate-200;
+  @apply text-slate-100;
 }
 
 h1 a:hover {
-  @apply text-sky-900;
+  @apply text-white/60;
 }
